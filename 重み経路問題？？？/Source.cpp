@@ -39,6 +39,7 @@ bool SearchPath_r(const MapType& M, FootPrint FP, const Point& Now, const Point&
 	auto Y2 = std::max<int>(std::get<1>(Last)-1, 0);
 	if ((X1 == X2) && (Y1 == Y2)) {
 		if (Min >= Wait) {
+			FP.push_back({ X1,Y1 });
 			Min = Wait;
 			C++;	
 			FPR = FP;
